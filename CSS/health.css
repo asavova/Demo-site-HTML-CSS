@@ -1,0 +1,675 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #dddddd;
+    min-height: 100vh;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+ul.topnav {
+    z-index: 999;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 50px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+    border-bottom: 1px solid transparent;
+    background-color: #333;
+}
+
+ul.topnav li {display: inline;height: 50px;
+    float: left;
+
+    margin-right: 0px;
+    padding: 0 20px;
+}
+
+ul.topnav li a {
+
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+
+
+}
+ul.topnav a:last-child {
+    border-right: 0px;}
+
+ul.topnav li a:hover {color: #ff66cc; border-bottom: 1px solid #ff66cc; }
+.right{float: right;}
+ul.topnav .active{
+    color: #ff66cc;border-bottom: 1px solid #ff66cc;
+
+}
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+    ul.topnav li:not(:first-child) {display: none;}
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width:680px) {
+    ul.topnav.responsive {position: relative;}
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+
+    }
+
+
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+ul.topnav.responsive li {
+    float: none;
+    display: inline;
+
+}
+ul.topnav.responsive li a {
+    display: block;
+    text-align: center;
+    margin-right: 55px;
+
+}
+
+
+
+
+
+.panelcontent{
+    margin-top: 10px ;
+    color: #333333;
+
+}
+
+.content {
+    padding-left: 180px;
+    padding-right: 140px;
+
+
+    background-color: #ddd;
+
+    flex: 1;
+    overflow: hidden;
+}
+.asd{
+    height: 80%;
+    width: 30%;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    background-color: #dddddd;
+    padding-left: 50px;
+    float: left;
+    width: 75%;
+}
+
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    padding-right: 50px;
+    width: 25%;
+
+    padding-left: 10px;
+}
+
+/* Fake image */
+.fakeimg {
+
+    width: 100%;
+
+}
+
+/* Add a card effect for articles */
+.card {
+    margin-top: 15px;
+    padding-bottom: 40px;
+
+    background-color: white;
+
+
+}
+.rightcolumn .card{
+    padding-bottom: 0;
+    margin-top: 50px;
+
+
+
+}
+.card h3{
+    font-family: Comic Sans MS;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 5px ;
+    color: #333333;
+}
+.card .panelcontent h3{
+
+    font-size: 18px;
+    font-family: Comic Sans MS;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 950px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+.button {
+
+    background-color: #fff3fe;
+
+    text-align: left;
+    font-size: 28px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: #333333;
+
+
+}
+
+.section3{
+    border-top: 5px solid #444444;
+    border-left:1px solid #444444;
+    border-right:1px solid #444444;
+    border-bottom:2px solid #444444;
+    margin-top: 0;
+
+}
+
+.button:hover{
+
+    color: #ff66cc;
+
+}
+.buttoncont{
+    font-size: 20px;
+    font-weight: bold ;
+    margin-top: 5px;
+    margin-left: 20%;
+    left: 0;
+    padding: 5px;
+    max-height: 600px;
+
+    background-color: #d9c9e9;
+    overflow: hidden;
+
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.rightcolumn .card p ,h2{
+    margin:15px;
+
+}
+.leftcolumn .card{
+    padding-bottom: 0;
+    margin-top:50px ;}
+.panellist {
+    color: #ff66cc;
+}
+.panellist li:hover{
+    color: #ff66cc;
+}
+.list{
+    padding-left: 15px;
+    font-size: 17px;
+    line-height: 2;
+    color: #333333;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+.button span:after {
+    content: '\00BB';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-left: 20px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+
+}
+.container {
+    position: relative;
+    width: 100%;
+
+    max-width: 400px;
+}
+
+
+
+.panel {
+    font-size: 18px;
+    padding: 15px 10px;
+    display: none;
+    background-color: #d9c9e9;
+    overflow: hidden;
+}
+.panel p,li{
+    padding: 5px 15px;
+
+}
+.accordion {
+    background-color: #7d5772;
+
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    z-index: 1;
+
+    max-width: 1300px;
+    max-height: 500px;
+    position: relative;
+
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    background-color: #333333;
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 4px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 78%;
+    height: 40%;
+    right: 0;
+    opacity: 0.7;
+
+    text-align: center;
+}
+.text-block h4 span{
+    font-size: 16px;
+    color: #dddddd;
+}
+.text h2{margin: 5px;}
+.text p{
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 60%;
+}
+.card a{
+    text-decoration: none;
+    color: #fff3fe;
+
+}
+.card h4{font-size: 16px;
+    color: #555555;
+    text-align: center;
+    margin-left: 15px;
+
+    margin-right: 15px;}
+hr.main{
+    border-top: 2px solid #d9c9e9;
+    text-align:center;
+
+    width: 100%;}
+hr.pink{
+    border-top: 2px solid #ff66cc;
+    text-align:center;
+    margin: 0;
+    width: 100%;
+
+}
+ul.panellist li a{
+    color: #333333;
+}
+.panel a span{
+    list-style:none;font-weight: bold; color: #333333;
+    text-decoration: none;
+}
+.panel  a span:hover{
+    text-decoration: underline;
+    text-decoration-color: #333333;
+    cursor: pointer;
+}
+.panel h2{
+    color: #333333;
+    font-size: 18px;
+    text-align: center;
+}
+.panel a{
+    color: #444444;
+
+}
+
+.panellist a{
+    color:#444444;
+    cursor: text;
+}
+
+ul.panellist li{
+    color: #444444;
+}
+ul.panellist li:hover{
+    color: #444444;
+}
+.rightcolumn .card h4{margin: 8px 10px;}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 680px) {
+    .prev, .next,.text {font-size:10px;}
+    .card h3{font-size: 18px;}
+
+
+
+}
+@media only screen and (max-width: 250px) {
+    .prev, .next,.text {font-size:8px;}
+    .card h3{font-size: 26px;}
+    .text p{
+        font-size: 10px;
+    }
+    .card p{font-size: 15px;}
+}
+
+.card .gallery {
+    margin: 0;
+
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+.columnrow2{
+    padding:5px;
+    float: left;
+    width: 50%;
+}
+.buttoncont{
+    font-size: 18px;
+    margin-top: 5px;
+    margin-left: 20%;
+
+    padding: 5px;
+    max-height: 600px;
+
+    background-color: #d9c9e9;
+    overflow: hidden;
+
+}
+.text-block {
+    position: absolute;
+    top: 0px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    right: 0px;
+    width: 100%;
+    background-color: #333333;
+    text-align: center;
+    opacity: 0.7;
+    color: #fff3fe;
+    font-size:16px ;
+
+}
+.text-block:hover h5{
+    text-decoration: underline;
+
+}
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.textbox-container {
+    position: relative;
+
+
+}
+.image {
+
+
+    width: 100%;
+    height: auto;
+
+}
+
+.img-hover:hover,.textbox-container:hover .image {
+    opacity: 0.4;
+}
+input[type=text] {
+    width: 130px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+
+    font-size: 16px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    background-image: url('searchicon.png');
+
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+.navbar{
+    margin-top: 0px;
+
+
+
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    overflow: hidden;
+    background-color: #333;border: 2px solid #ff66cc;
+
+}
+
+.navbar li {
+    float: left;width: 100%;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+    background-color: transparent;
+
+    font-size: 20px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar li:hover {
+    background-color: #111;
+}
+.multicolumn {
+
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    column-gap: 40px;
+
+
+    column-rule: 1px solid #ff66cc;
+
+    margin-top:40px;
+
+}
+.multicolumn p{
+
+    margin: 2px 20px;
+
+    bottom: 0;font-size: 17px;
+    color: #555555;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Bodoni MT Poster Compressed";
+}
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+}
+ol li {
+    counter-increment: my-awesome-counter;
+}
+ol li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: #ff66cc;
+    font-weight: bold;
+}
